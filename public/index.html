@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+    <title>Routify</title>
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+        }
+        header img {
+            width: 100px;
+            height: 100px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/Designer (1).jpeg" alt="logo">
+        <h2>Routify</h2>
+    </header>
+    <main>
+        <div id="map"></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiaXNyYWNvZGUiLCJhIjoiY201MDh0Y3ViMWJxdjJqczhoYTU5aWN1bCJ9.Kk4ZtlDzU5gb9RRg29gf6g';
+            const map = new mapboxgl.Map({
+                container: 'map', // Div donde se carga el mapa
+                style: 'mapbox://styles/mapbox/streets-v12', // Estilo del mapa
+                center: [-3.7038, 40.4168], // Coordenadas de Madrid
+                zoom: 12,
+            });
+        </script>
+    </main>
+    <footer>
+        <!-- Aquí puedes añadir información adicional -->
+    </footer>
+</body>
+</html>
